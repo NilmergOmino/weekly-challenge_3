@@ -89,7 +89,7 @@ body{
     width: 100%;
     padding: 0;
     text-align: center;
-    background-image: url("../img/desk.png");
+    background-image: url("../img/desk_min.png");
     background-size: cover;
     background-position: center 80%;
     background-repeat: no-repeat;
@@ -227,7 +227,7 @@ body{
     width: 70%;
     z-index: 16;
     left: 30%;
-    background-image: url("../img/beach.png");
+    background-image: url("../img/beach_min.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
