@@ -1,6 +1,11 @@
+/*
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Merriweather', serif;
+*/
 body{
     background-color: white;
     margin: 0;
+    font-family: 'Merriweather', serif;
 }
 .nav{
     height: 115px;
@@ -12,6 +17,13 @@ body{
     top: 0;
     width: 100%;
     z-index: 100;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.5s;
+}
+.nav_sticky{
+    transition: 0.5s;
+    height: 50px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.7);
 }
 .nav__ul{
     display: flex;
@@ -28,6 +40,15 @@ body{
     text-transform: uppercase;
     font-size: 14px;
     transition: 0.3s;
+}
+.button-toggle-nav{
+    display: none;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    padding: 0;
+    opacity: 0.7;
 }
 .nav__link:hover, .nav__link:focus{
     color: rgb(34, 34, 34);
@@ -63,27 +84,34 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 600px;
+    width: 100%;
+    padding: 0;
     text-align: center;
     background-image: url("../img/desk.png");
     background-size: cover;
     background-position: center 80%;
     background-repeat: no-repeat;
+    position: relative;
 }
 .header:after{
     content: '';
     display: block;
     position: absolute;
+    top: 0;
+    left: 0;
     background-color: rgba(0,0,0,0.7);
-    height: 100vh;
+    height: 100%;
     width: 100%;
     z-index: 1;
 }
 .header__heading{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
     z-index: 2;
     text-transform: uppercase;
     color: white;
-    font-size: 40px;
+    font-size: 52px;
     font-weight: bold;
     margin-bottom: 5px;
     margin-top: 50px;
@@ -94,6 +122,7 @@ body{
     color: rgb(204, 204, 204);
 }
 .header__link, .article-support__link{
+    font-family: 'Montserrat', sans-serif;
     z-index: 2;
     text-decoration: none;
     text-transform: uppercase;
@@ -129,16 +158,19 @@ body{
     margin: 50px 0 10px 0;
 }
 .article__heading{
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     font-weight: bold;
     color: black;
     margin-bottom: 0;
     font-size: 30px;
     line-height: 1.4em;
+    text-align: center;
 }
 .article__sub-heading{
     color: rgb(118, 118, 118);
     font-size: 16px;
+    text-align: center;
 }
 .section-services, .section-our-culture{
     width: 20%;
@@ -152,6 +184,8 @@ body{
     min-height: 54px;
 }
 .section__heading{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     font-weight: bold;
     color: rgb(34, 34, 34);
@@ -166,19 +200,21 @@ body{
 .article-support{
     align-items: stretch;
     justify-content: flex-end;
-    height: 100vh;
+    min-height: 500px;
     padding: 0;
+    position: relative;
 }
 .article-support:before{
     content: '';
     width: 60%;
     position: absolute;
     left: 0;
-    height: 100vh;
+    top: 0;
+    height: 100%;
     background-color: rgb(233, 233, 233);
     background-image: url("../img/rack.png");
     background-repeat: no-repeat;
-    background-size: 65vh;
+    background-size: auto 90%;
     background-position: center;
     z-index: 15;
 }
@@ -186,7 +222,7 @@ body{
     content: '';
     display: block;
     position: absolute;
-    height: 100vh;
+    height: 100%;
     width: 70%;
     z-index: 16;
     left: 30%;
@@ -196,7 +232,7 @@ body{
     background-position: center;
 }
 .content-container{
-    padding: 15vh 50px 0 100px;
+    padding: 50px 50px 30px 100px;
     width: calc(70% - 150px);
     z-index: 25;
     background-color: rgba(0,0,0,0.7);
@@ -207,6 +243,7 @@ body{
 }
 .article__heading_light{
     color: white;
+    text-align: left;
 }
 .text-span_green{
     color: rgb(125, 196, 118);
@@ -217,7 +254,8 @@ body{
     line-height: 1.7em;
 }
 .article-support__link{
-    margin-top: 20px;
+    margin: 20px 0 50px 0;
+    font-family: 'Montserrat', sans-serif;
 }
 .article-support__ul{
     color: rgb(205, 205, 205);
@@ -258,6 +296,7 @@ body{
 }
 .section-project__heading{
     margin-bottom: 10px;
+    text-align: left;
 }
 .section-project__paragraph{
     max-width: 350px;
@@ -293,6 +332,7 @@ body{
     margin-right: 10px;
 }
 .section-project__link{
+    font-family: 'Montserrat', sans-serif;
     margin-top: 15px;
     text-transform: uppercase;
     text-decoration: none;
@@ -435,8 +475,10 @@ body{
 }
 .article-contact__heading{
     color: white;
+    text-align: center;
 }
 .article-contact__link{
+    font-family: 'Montserrat', sans-serif;
     color: white;
     text-transform: uppercase;
     text-decoration: none;
@@ -468,7 +510,7 @@ body{
     padding: 0;
     margin: 0;
     width: 70%;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-around;
     list-style: none;
     align-items: center;
@@ -487,6 +529,7 @@ body{
     width: 300px;
 }
 .section-info__heading{
+    font-family: 'Montserrat', sans-serif;
     color: white;
     text-transform: uppercase;
     font-size: 14px;

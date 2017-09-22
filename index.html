@@ -5,8 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Nilmerg Omino">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <title>zadanie 3</title>
     <!-- strona zrealizowana na podstawie projektu graficznego będącego zadaniem 3 udostępnionym na łamach grupy Weekly WebDev Challenge -->
 </head>
@@ -16,12 +18,13 @@
         <p class="header__paragraph">Proin iaculis purus consequat sem cure.</p>
         <a class="header__link" href="#">View portfolio</a>
     </header>
-    <nav class="nav">
+    <nav class="nav" id="nav">
         <a class="nav__logo-link" href="index.html">
             <span class="icon icon-logo"><img src="img/logo.png" alt="" class="nav__logo-img"></span>
             <span class="nav__logo-text">Treehouse</span>
         </a>
-        <ul class="nav__ul">
+        <button class="button-toggle-nav" id="menu-button"><img alt="show menu" src="img/menu-toggle.svg"></button>
+        <ul class="nav__ul" id="menu">
             <li class="nav__list-item"><a class="nav__link" href="#">home</a></li>
             <li class="nav__list-item"><a class="nav__link" href="#">about</a></li>
             <li class="nav__list-item"><a class="nav__link" href="#">blog</a></li>
@@ -191,5 +194,7 @@
             <li class="social-media-list-item"><a class="icon-social-media icon icon-google-plus" href="#"><img src="img/google-plus.png" alt="google+"></a></li>
         </ul>
     </footer>
+    <script src="js/toggle-menu.js"></script>
+    <script src="js/sticky-nav.js"></script>
 </body>
 </html>
