@@ -42,6 +42,7 @@ body{
     transition: 0.3s;
 }
 .button-toggle-nav{
+    background-color: white;
     display: none;
     border: 0;
     width: 30px;
@@ -316,6 +317,7 @@ body{
     margin: 0 0 10px 0;
 }
 .developing-content-container{
+    width: calc(100% - 75px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -500,20 +502,33 @@ body{
 }
 .partners{
     width: 100%;
-    padding: 30px 0;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
+    align-content: center;
 }
 .partners__list{
     display: flex;
     padding: 0;
     margin: 0;
     width: 70%;
-    flex-wrap: nowrap;
     justify-content: space-around;
+    align-content: center;
     list-style: none;
     align-items: center;
+}
+.partners__list-item{
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 0 10px;
+    width: 20%;
+}
+.partners__list-item img{
+    max-width: 100%;
 }
 .info-container{
     width: 100%;
